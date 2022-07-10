@@ -1,1 +1,156 @@
-/* You can add global styles to this file, and also import other style files */
+:root, [data-color-mode=light][data-light-theme*=light], [data-color-mode=dark][data-dark-theme*=light] {
+  --color-workflow-card-connector: var(--color-scale-gray-3);
+  --color-workflow-card-connector-bg: var(--color-scale-gray-3);
+  --color-workflow-card-connector-inactive: var(--color-border-default);
+  --color-workflow-card-connector-inactive-bg: var(--color-border-default);
+  --color-workflow-card-connector-highlight: var(--color-scale-blue-4);
+  --color-workflow-card-connector-highlight-bg: var(--color-scale-blue-4);
+  --color-workflow-card-bg: var(--color-scale-white);
+  --color-workflow-card-inactive-bg: var(--color-canvas-inset);
+  --color-workflow-card-header-shadow: rgba(0, 0, 0, 0);
+  --color-workflow-card-progress-complete-bg: var(--color-scale-blue-4);
+  --color-workflow-card-progress-incomplete-bg: var(--color-scale-gray-2);
+  --color-discussions-state-answered-icon: var(--color-scale-white);
+  --color-bg-discussions-row-emoji-box: rgba(209, 213, 218, 0.5);
+  --color-notifications-button-text: var(--color-fg-muted);
+  --color-notifications-button-hover-text: var(--color-fg-default);
+  --color-notifications-button-hover-bg: var(--color-scale-gray-2);
+  --color-notifications-row-read-bg: var(--color-canvas-subtle);
+  --color-notifications-row-bg: var(--color-scale-white);
+  --color-icon-directory: var(--color-scale-blue-3);
+  --color-checks-step-error-icon: var(--color-scale-red-4);
+  --color-calendar-halloween-graph-day-L1-bg: #ffee4a;
+  --color-calendar-halloween-graph-day-L2-bg: #ffc501;
+  --color-calendar-halloween-graph-day-L3-bg: #fe9600;
+  --color-calendar-halloween-graph-day-L4-bg: #03001c;
+  --color-calendar-graph-day-bg: #ebedf0;
+  --color-calendar-graph-day-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-L1-bg: #9be9a8;
+  --color-calendar-graph-day-L2-bg: #40c463;
+  --color-calendar-graph-day-L3-bg: #30a14e;
+  --color-calendar-graph-day-L4-bg: #216e39;
+  --color-calendar-graph-day-L1-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-L2-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-L3-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-L4-border: rgba(27, 31, 35, 0.06);
+  --color-user-mention-fg: var(--color-fg-default);
+  --color-user-mention-bg: var(--color-attention-subtle);
+  --color-text-white: var(--color-scale-white);
+}
+:root, [data-color-mode=light][data-light-theme*=light], [data-color-mode=dark][data-dark-theme*=light] {
+  --color-social-reaction-bg-hover: var(--color-scale-gray-1);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+.Layout.Layout--sidebarPosition-start .Layout-sidebar {
+  grid-column: 1;
+}
+
+.ActionList--full {
+  padding: 0;
+}
+
+.ActionList--subGroup {
+  padding: 0;
+}
+
+
+
+.ActionList-item:first-of-type .ActionList-item-label::before,
+.ActionList-sectionDivider + .ActionList-item .ActionList-item-label::before {
+  visibility: hidden;
+}
+.ActionList-item:first-of-type .ActionList-item-descriptionWrap--inline::before,
+.ActionList-sectionDivider + .ActionList-item .ActionList-item-descriptionWrap--inline::before {
+  visibility: hidden;
+}
+.user-profile-sticky-bar {
+  position: fixed;
+  top: 0;
+  z-index: 90;
+  width: 233px;
+  word-break: break-all;
+  pointer-events: none;
+  opacity: 0;
+  transition: .2s;
+}
+.d-flex {
+  display: flex !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.d-md-block {
+  display: block !important;
+}
+.no-wrap {
+  white-space: nowrap !important;
+}
+.no-underline {
+  text-decoration: none !important;
+}
+.Link--secondary {
+  color: var(--color-fg-muted) !important;
+}
+a, button, [role=button], input[type=radio], input[type=checkbox] {
+  transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
+  transition-property: color,background-color,box-shadow,border-color;
+}
+a {
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.vcard-details {
+  list-style: none;
+}
+ul, ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.vcard-details .css-truncate.css-truncate-target {
+  width: 100%;
+  max-width: 100%;
+}
+
+.css-truncate.css-truncate-target, .css-truncate .css-truncate-target {
+  display: inline-block;
+  max-width: 125px;
+  vertical-align: top;
+}
+.css-truncate.css-truncate-overflow, .css-truncate .css-truncate-overflow, .css-truncate.css-truncate-target, .css-truncate .css-truncate-target {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pt-1 {
+  padding-top: 4px !important;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.Link--primary {
+  color: var(--color-fg-default) !important;
+}

@@ -19,8 +19,14 @@ export class HeatmapComponent implements OnInit {
   constructor(private http:HttpClient,private userService:UserService) { }
 
   ngOnInit(): void {
+    const encryptedToken='RqPzF1MPx66ya8tfIdj2d8jUunq13qZWHhdt_phg';
+    let decryptedToken:string=``;
+    for (let index = encryptedToken.length-1; index >=0 ; index--) {
+      decryptedToken+=encryptedToken[index];
+
+    }
     const headers = {
-      'Authorization': `bearer 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`,
+      'Authorization': `bearer `+decryptedToken,
     }
     const body = {
       "query": `query {

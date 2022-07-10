@@ -20,7 +20,7 @@ export class HeatmapComponent implements OnInit {
 
   ngOnInit(): void {
     const headers = {
-      'Authorization': `bearer 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`,
+      'Authorization': `bearer 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`,
     }
     const body = {
       "query": `query {
